@@ -5,6 +5,7 @@ class HomeController
     public function index()
     {
         //  echo 'Home';
-        Filmes::selecionaTodos();
+        $colecaoFilme = Filmes::selecionaTodos();
+        var_dump($colecaoFilme);
     }
 }
