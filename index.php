@@ -8,6 +8,7 @@ require_once 'app/Controller/AdminController.php';
 require_once 'app/Model/Filmes.php';
 require_once  'vendor/autoload.php';
 
+
 //pegando o templete
 $templete = file_get_contents('app/templete/estrutura.html');
 
