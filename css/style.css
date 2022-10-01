@@ -56,3 +56,9 @@ body{background-color:#6495ED;}
             color: #333;
             padding-left: 2px;
         }
+        nav{
+            display: block;
+        }
+        nav a:last-child{
+            float: right;
+        }
