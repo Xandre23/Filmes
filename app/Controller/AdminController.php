@@ -8,11 +8,12 @@ class AdminController
         $twig = new \Twig\Environment($loader);
         $templete = $twig->load('admin.html');
 
+        $objPostagens = Filmes::selecionaTodos();
 
         $parametros = array();
+        $parametros['filmes'] = $objPostagens;
 
         $conteudo =  $templete->render($parametros);
-
         echo $conteudo;
     }
     public function create()
@@ -27,6 +28,13 @@ class AdminController
     }
     public function insert()
     {
-        var_dump($_POST);
+        try {
+            Filmes::insert($_POST);
+            echo '<script>alert("Filme Inserido com sucesso");</script>';
+            echo '<script>location.href="http://localhost:8080/Filmes/?pagina=admin&metodo=index"</script>';
+        } catch (Exception $e) {
+            echo '<script>alert("' . $e->getMessage() . '");</script>';
+            echo '<script>location.href="http://localhost:8080/Filmes/?pagina=admin&metodo=create"</script>';
+        }
     }
 }
