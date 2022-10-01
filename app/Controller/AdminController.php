@@ -70,4 +70,15 @@ class AdminController
             echo '<script>location.href="http://localhost:8080/Filmes/?pagina=admin&metodo=change&id=' . $_POST['id'] . '"</script>';
         }
     }
+    public function delete($paramId)
+    {
+        try {
+            Filmes::delete($paramId);
+            echo '<script>alert("Filme deletado com sucesso");</script>';
+            echo '<script>location.href="http://localhost:8080/Filmes/?pagina=admin&metodo=index"</script>';
+        } catch (Exception $e) {
+            echo '<script>alert("' . $e->getMessage() . '");</script>';
+            echo '<script>location.href="http://localhost:8080/Filmes/?pagina=admin&metodo=index' . $_POST['id'] . '"</script>';
+        }
+    }
 }
