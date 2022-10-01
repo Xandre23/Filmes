@@ -6,7 +6,7 @@ class Filmes
     {
         $con = Connection::getConn();
 
-        $sql = "SELECT * FROM filme ORDER BY id DESC";
+        $sql = "SELECT * FROM filme ORDER BY avalacao DESC";
         $sql = $con->prepare($sql);
         $sql->execute();
         $resultado = array();
