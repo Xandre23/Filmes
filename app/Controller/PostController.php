@@ -16,6 +16,7 @@ class PostController
 
 
             $parametros = array();
+            $parametros['id'] = $postagem->id;
             $parametros['titulo'] = $postagem->titulo;
             $parametros['capa'] = $postagem->capa;
             $parametros['ano'] = $postagem->ano;
