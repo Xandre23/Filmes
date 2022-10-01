@@ -1,14 +1,15 @@
 <section>     
     <h1>Filmes:</h1>
-    {% for post in filmes %}        
+    {% for postagem in filmes %}        
     <article>
         <header>
-           <h2><a href="#">{{post.titulo}}</a></h2> 
+           <h2><a href="http://localhost:8080/Filmes/?pagina=post&id={{postagem.id}}">{{postagem.titulo}}</a></h2> 
         </header>
-        <p>imagem</p>
-        <p>Ano: {{post.ano}}</p>
-        <p>Diretor: {{post.diretor}}</p>
-        <p>Avaliação: {{post.avaliacao}}</p>
+        <p>{{postagem.capa}}</p>
+        <p>Ano: {{postagem.ano}}</p>
+        <p>Diretor: {{postagem.diretor}}</p>
+        <p>Avaliação: {{postagem.avaliacao}}</p>
+        
     </article> 
     {% endfor %}             
           
