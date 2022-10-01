@@ -11,10 +11,12 @@
         <th>alteracao</th>
         <th>DELETE</th>
     </tr>
+    {% for postagem in filmes %}  
     <tr>
-        <th>ID</th>
-        <th>titulo</th>
-        <th>alteracao</th>
+        <th>{{postagem.id}}</th>
+        <th>{{postagem.titulo}}</th>
+        <th>Alteração</th>
         <th>DELETE</th>
     </tr>
+    {% endfor %}  
 </table>

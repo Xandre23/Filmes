@@ -36,4 +36,26 @@ class Filmes
         }
         return $resultado;
     }
+    public static function insert($dadosPost)
+    {
+        //VALIDAÇÃO DE Dados simples
+        if (empty($dadosPost['titulo']) or empty($dadosPost['ano']) or empty($dadosPost['diretor']) or empty($dadosPost['avaliacao'])) {
+            throw new Exception("Preencha todos os campos");
+
+            return false;
+        }
+        $con = Connection::getConn();
+        $sql = 'INSERT INTO filme (titulo,ano,diretor,avaliacao) VALUES (:tit, :ano, :dir, :ava)';
+        $sql = $con->prepare($sql);
+        $sql->bindValue(':tit', $dadosPost['titulo']);
+        $sql->bindValue(':ano', $dadosPost['ano']);
+        $sql->bindValue(':dir', $dadosPost['diretor']);
+        $sql->bindValue(':ava', $dadosPost['avaliacao']);
+        $resultado = $sql->execute();
+
+        if ($resultado == 0) {
+            throw new Exception("Dados não inserido na tabela");
+            return false;
+        }
+    }
 }
