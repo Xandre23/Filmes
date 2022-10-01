@@ -20,4 +20,20 @@ class Filmes
         }
         return $resultado;
     }
+
+    public static function selecionarPorId($idPost)
+    {
+        $con = Connection::getConn();
+        $sql = "SELECT * FROM filme WHERE id = :id";
+        $sql = $con->prepare($sql);
+        $sql->bindValue(':id', $idPost, PDO::PARAM_INT);
+        $sql->execute();
+
+        $resultado = $sql->fetchObject('Filmes');
+
+        if (!$resultado) {
+            throw new Exception("Não foi encontrado nenhum registro no banco");
+        }
+        return $resultado;
+    }
 }

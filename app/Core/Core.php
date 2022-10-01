@@ -12,10 +12,12 @@ class Core
             $controller = 'HomeController';
         }
         //fazendo verificação se existe a pagina ou não
-        if (!class_exists($controller)) {
-            $controller = 'ErroController';
+        if (isset($urlGet['id']) && ($urlGet['id'] != null)) {
+            $id = $urlGet['id'];
+        } else {
+            $id = null;
         }
 
-        call_user_func_array(array(new $controller, $acao), array());
+        call_user_func(array(new $controller, $acao), $id);
     }
 }
