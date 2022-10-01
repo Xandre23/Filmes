@@ -57,5 +57,26 @@ class Filmes
             throw new Exception("Dados não inserido na tabela");
             return false;
         }
+        return true;
+    }
+    public static function update($params)
+    {
+        $con = Connection::getConn();
+        $sql = "UPDATE filme SET titulo = :tit, capa = :cap, ano = :ano, diretor = :dir, avaliacao = :ava WHERE id = :id";
+        $sql = $con->prepare($sql);
+
+        $sql->bindValue(':tit', $params['titulo']);
+        $sql->bindValue(':cap', $params['capa']);
+        $sql->bindValue(':ano', $params['ano']);
+        $sql->bindValue(':dir', $params['diretor']);
+        $sql->bindValue(':ava', $params['avaliacao']);
+        $sql->bindValue(':id', $params['id']);
+        $resultado = $sql->execute();
+
+        if ($resultado == 0) {
+            throw new Exception("Falha ao alterar");
+            return false;
+        }
+        return true;
     }
 }
