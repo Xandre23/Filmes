@@ -1,0 +1,19 @@
+<section>     
+    <h1>Filmes com destaques:</h1>
+    {% for postagem in filmes %} 
+    {% if postagem.avaliacao >= 8 and temperature <= 10 %}
+
+    <article>
+        <header>
+           <h2><a href="http://localhost:8080/Filmes/?pagina=post&id={{postagem.id}}">{{postagem.titulo}}</a></h2> 
+        </header>
+        <p>{{postagem.capa}}</p>
+        <p>Ano: {{postagem.ano}}</p>
+        <p>Diretor: {{postagem.diretor}}</p>
+        <p>Avaliação: {{postagem.avaliacao}}</p>
+        
+    </article> 
+    {% endif %}
+    {% endfor %}  
+          
+</section>

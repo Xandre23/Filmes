@@ -1,6 +1,6 @@
 <?php
 
-class HomeController
+class DestaquesController
 {
     public function index()
     {
@@ -9,8 +9,7 @@ class HomeController
             $colecaoFilmes = Filmes::selecionaTodos();
             $loader = new \Twig\Loader\FilesystemLoader('app/View');
             $twig = new \Twig\Environment($loader);
-            $templete = $twig->load('home.html');
-
+            $templete = $twig->load('destaques.html');
 
 
             $parametros = array();
