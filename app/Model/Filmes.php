@@ -45,7 +45,7 @@ class Filmes
             return false;
         }
 
-        //vld img
+        //validando img
 
         $SendCadImg = filter_input(INPUT_POST, 'SendCadImg', FILTER_SANITIZE_STRING);
         if ($SendCadImg) {
