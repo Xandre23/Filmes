@@ -1,9 +1,9 @@
 *{margin: 0; padding: 0}
-body{background-color:#6495ED;}
+body{background-color:#030915;}
 /*inicio do corpo do site*/
 #corpo{
     width: 1000px;
-     background-color: #fff; 
+     background-color: rgb(23, 4, 4); 
      margin: 0 auto; 
      border-left:2px solid #ccc; 
      border-right:2px solid #ccc;
@@ -12,6 +12,7 @@ body{background-color:#6495ED;}
     /*fim do corpo do site*/
     /*topo menu do site*/
     #topo{
+        
         padding: 20px 25px;
         border-bottom: 2px solid #CCC;
     }
@@ -27,7 +28,7 @@ body{background-color:#6495ED;}
     /*fim topo menu do site*/
     /*inicio do conteudo site*/
         #conteudo{
-            background:#fff;
+            background-color:rgb(50, 9, 9);
             padding: 20px 25px;
         }
         #conteudo h1{
@@ -62,3 +63,7 @@ body{background-color:#6495ED;}
         nav a:last-child{
             float: right;
         }
+        th{
+            text-align: center;
+        }
+       
