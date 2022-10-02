@@ -15,7 +15,7 @@ class Filmes
             $resultado[] = $row;
         }
 
-        if (!$resultado) {
+        if ($resultado == 0) {
             throw new Exception("Não foi encontrado nenhum registro no banco");
         }
         return $resultado;
