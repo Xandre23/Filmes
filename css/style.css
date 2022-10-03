@@ -1,5 +1,9 @@
 *{margin: 0; padding: 0}
-body{background-color:#030915;}
+body{
+  
+    background-image:url(https://technext.ng/wp-content/uploads/2019/01/Cinemas-featured-image.jpg);
+
+}
 /*inicio do corpo do site*/
 #corpo{
     width: 1000px;
@@ -13,57 +17,83 @@ body{background-color:#030915;}
     /*topo menu do site*/
     #topo{
         
-        padding: 20px 25px;
-        border-bottom: 2px solid #CCC;
+        padding: 30px 25px;
+        border-bottom: 0.5px solid #CCC;
+        background-image: url(../img/fotoMENU.jpeg);
     }
     #topo a:hover{
         text-decoration: underline;
     }
     #topo a{
-        color: #333;
-        text-decoration: none;
-        font: 20px arial;
+        color: #FF0000;
+        text-decoration: none; 
+        font: 30px fantasy;
+        text-align:center;
         
     }
     /*fim topo menu do site*/
     /*inicio do conteudo site*/
         #conteudo{
             background-color:rgb(50, 9, 9);
-            padding: 20px 25px;
+            padding: 20px 25px 100%;
+            
+
         }
         #conteudo h1{
             font: 24px Arial;
-            color: #6495ED;
+            color: #FFFF;
             margin-bottom: 20px;
 
         }
         #conteudo article{
+            
             margin-bottom: 20px;
         }
         article h2 a:hover{
             text-decoration: underline;
+            
         }
         article h2{
-            padding-bottom: 7px; 
+            padding-bottom: 7px;
+             
         }
         article h2 a{
             text-decoration: none;
             margin-bottom: 1px;
             font: 22px arial; 
-            color: #333;
+            color: #ffd700;
+        }
+        h2{
+            font: 22px arial; 
+            color: #ffd700;
         }
         article p{
-            font:16px Arial;
-            color: #333;
+            font-size: 19px;
+            font-family: fantasy, Arial ;
+            color: #black;
             padding-left: 2px;
         }
         nav{
             display: block;
+        }
+        nav a{
+
         }
         nav a:last-child{
             float: right;
         }
         th{
             text-align: center;
+            color: #ffd700;
+        }
+        div .home{
+            border: 1px solid;
+            background-color: #FF0000;
+            width:200px;
+            margin-left:5px;
+            margin-top:5px;
+            float:left;
+            padding: 4px;
+
         }
        

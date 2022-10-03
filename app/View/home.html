@@ -1,6 +1,7 @@
 <section>     
     <h1>Filmes:</h1>
-    {% for postagem in filmes %}        
+    {% for postagem in filmes %}  
+    <div class="home">     
     <article>
         <header>
            <h2><a href="http://localhost:8080/Filmes/?pagina=post&id={{postagem.id}}">{{postagem.titulo}}</a></h2> 
@@ -10,7 +11,11 @@
         <p>Diretor: {{postagem.diretor}}</p>
         <p>Avaliação: {{postagem.avaliacao}}</p>
         
-    </article> 
+        
+    </article>
+    
+</div> 
     {% endfor %}             
           
 </section>
+
