@@ -42,7 +42,7 @@ class AdminController
         $loader = new \Twig\Loader\FilesystemLoader('app/View');
         $twig = new \Twig\Environment($loader);
         $templete = $twig->load('update.html');
-        
+
         $post = Filmes::selecionarPorId($paramId);
 
         $parametros = array();
