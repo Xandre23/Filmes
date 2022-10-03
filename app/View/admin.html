@@ -4,8 +4,8 @@
 <br>
 <hr></hr>
 <br>
-<table  class="table table-hover" >
-    <tr class="table-dark">
+<table  class="table table-dark table-striped-columns-hover" >
+    <tr class="">
         <th>ID</th>
         <th>TÍtulo</th>
         <th>Alteração</th>
@@ -15,8 +15,8 @@
     <tr>
         <th>{{postagem.id}}</th>
         <th>{{postagem.titulo}}</th>
-        <th><a href="http://localhost:8080/Filmes/?pagina=admin&metodo=change&id={{postagem.id}}">ALTERAÇÃO</a></th>
-        <th><a href="http://localhost:8080/Filmes/?pagina=admin&metodo=delete&id={{postagem.id}}">DELETE</a></th>
+        <th><a  class="btn btn-warning" href="http://localhost:8080/Filmes/?pagina=admin&metodo=change&id={{postagem.id}}">ALTERAÇÃO</a></th>
+        <th><a class="btn btn-danger" href="http://localhost:8080/Filmes/?pagina=admin&metodo=delete&id={{postagem.id}}">DELETE</a></th>
     </tr>
     {% endfor %}  
 </table>
