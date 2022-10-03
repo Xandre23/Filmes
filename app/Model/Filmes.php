@@ -95,11 +95,10 @@ class Filmes
     public static function update($params)
     {
         $con = Connection::getConn();
-        $sql = "UPDATE filme SET titulo = :tit, capa = :cap, ano = :ano, diretor = :dir, avaliacao = :ava WHERE id = :id";
+        $sql = "UPDATE filme SET titulo = :tit, ano = :ano, diretor = :dir, avaliacao = :ava WHERE id = :id";
         $sql = $con->prepare($sql);
 
         $sql->bindValue(':tit', $params['titulo']);
-        $sql->bindValue(':cap', $params['capa']);
         $sql->bindValue(':ano', $params['ano']);
         $sql->bindValue(':dir', $params['diretor']);
         $sql->bindValue(':ava', $params['avaliacao']);

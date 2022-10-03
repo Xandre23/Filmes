@@ -48,7 +48,6 @@ class AdminController
         $parametros = array();
         $parametros['id'] = $post->id;
         $parametros['titulo'] = $post->titulo;
-        $parametros['capa'] = $post->capa;
         $parametros['ano'] = $post->ano;
         $parametros['diretor'] = $post->diretor;
         $parametros['avaliacao'] = $post->avaliacao;
