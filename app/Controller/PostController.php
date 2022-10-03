@@ -3,9 +3,7 @@
 class PostController
 {
     public function index($params)
-
     {
-
         //verificando se tem algum registro na tabela
         try {
             $postagem = Filmes::selecionarPorId($params);
@@ -13,7 +11,6 @@ class PostController
             $loader = new \Twig\Loader\FilesystemLoader('app/View');
             $twig = new \Twig\Environment($loader);
             $templete = $twig->load('single.html');
-
 
             $parametros = array();
             $parametros['id'] = $postagem->id;

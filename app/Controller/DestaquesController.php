@@ -11,7 +11,6 @@ class DestaquesController
             $twig = new \Twig\Environment($loader);
             $templete = $twig->load('destaques.html');
 
-
             $parametros = array();
             $parametros['filmes'] = $colecaoFilmes;
             $conteudo =  $templete->render($parametros);

@@ -11,8 +11,6 @@ class HomeController
             $twig = new \Twig\Environment($loader);
             $templete = $twig->load('home.html');
 
-
-
             $parametros = array();
             $parametros['filmes'] = $colecaoFilmes;
             $conteudo =  $templete->render($parametros);
